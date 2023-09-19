@@ -38,6 +38,7 @@ jobs:
           name: "Test application in a funny way that will make my mentors ask me 'mah zeh'"
           command: |
             echo passed
+          no_output_timeout: 120s
       - run:
           name: "Tag application Docker image"
           command: |
@@ -64,9 +65,8 @@ jobs:
           name: "Send Test Result to Discord"
           command: |
             WEBHOOK_URL="https://discordapp.com/api/webhooks/1153634597775622166/epHqCyc4EjOJbDuR0ehdwPwCf8j8vAmkFiHwW0Kw29HWyFWC0bn9qis9dHTfihXr29pc"
-            MESSAGE=$(docker logs <container_id>)
-            curl -X POST -H "Content-Type: application/json" -d "$JSON" "$WEBHOOK_URL"
-            JSON="{\"content\":\"Test application result:\n\`\`\`\n$MESSAGE\n\`\`\`\"}"
+            MESSAGE="Test application result:\n\`\`\`\n$(cat $CIRCLE_ARTIFACTS/output.txt)\n\`\`\`"
+            curl -X POST -H "Content-Type: application/json" -d "{\"content\":\"$MESSAGE\"}" "$WEBHOOK_URL"
             
         
       
