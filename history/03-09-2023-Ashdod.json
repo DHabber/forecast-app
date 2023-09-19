@@ -1,0 +1,30 @@
+{
+    "date": "03-09-2023", 
+    "city": {
+        "location": "Ashdod", 
+        "country": "Israel", 
+        "days": [
+            {
+                "date": "2023-09-03", 
+                "day_temp": 27.55, 
+                "night_temp": 25.43, 
+                "humidity": 67.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+            }, 
+            {
+                "date": "2023-09-04", 
+                "day_temp": 27.53, 
+                "night_temp": 25.13, 
+                "humidity": 65.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+            }, 
+            {
+                "date": "2023-09-05", 
+                "day_temp": 29.02, 
+                "night_temp": 25.98, 
+                "humidity": 59.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+            }
+        ]
+    }
+}

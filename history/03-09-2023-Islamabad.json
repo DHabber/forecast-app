@@ -1,0 +1,30 @@
+{
+    "date": "03-09-2023", 
+    "city": {
+        "location": "Islamabad", 
+        "country": "Pakistan", 
+        "days": [
+            {
+                "date": "2023-09-03", 
+                "day_temp": 32.14, 
+                "night_temp": 27.45, 
+                "humidity": 52.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png"
+            }, 
+            {
+                "date": "2023-09-04", 
+                "day_temp": 32.92, 
+                "night_temp": 27.85, 
+                "humidity": 47.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+            }, 
+            {
+                "date": "2023-09-05", 
+                "day_temp": 32.55, 
+                "night_temp": 28.25, 
+                "humidity": 48.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png"
+            }
+        ]
+    }
+}

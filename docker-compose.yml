@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  python3_final:
+    build: ../ex_24/
+    image: python3_final
+    ports:
+      - 8989:5000

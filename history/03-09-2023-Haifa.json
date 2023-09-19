@@ -1,0 +1,175 @@
+{
+    "date": "03-09-2023", 
+    "city": {
+        "location": "Haifa", 
+        "country": "Israel", 
+        "days": [
+            {
+                "date": "2023-09-03", 
+                "day_temp": 26.14, 
+                "night_temp": 24.54, 
+                "humidity": 68.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png"
+            }, 
+            {
+                "date": "2023-09-04", 
+                "day_temp": 26.39, 
+                "night_temp": 24.45, 
+                "humidity": 65.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png"
+            }, 
+            {
+                "date": "2023-09-05", 
+                "day_temp": 26.62, 
+                "night_temp": 24.9, 
+                "humidity": 66.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+            }
+        ]
+    }
+}{
+    "date": "03-09-2023", 
+    "city": {
+        "location": "Haifa", 
+        "country": "Israel", 
+        "days": [
+            {
+                "date": "2023-09-03", 
+                "day_temp": 26.14, 
+                "night_temp": 24.54, 
+                "humidity": 68.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png"
+            }, 
+            {
+                "date": "2023-09-04", 
+                "day_temp": 26.39, 
+                "night_temp": 24.45, 
+                "humidity": 65.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png"
+            }, 
+            {
+                "date": "2023-09-05", 
+                "day_temp": 26.62, 
+                "night_temp": 24.9, 
+                "humidity": 66.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+            }
+        ]
+    }
+}{
+    "date": "03-09-2023", 
+    "city": {
+        "location": "Haifa", 
+        "country": "Israel", 
+        "days": [
+            {
+                "date": "2023-09-03", 
+                "day_temp": 26.14, 
+                "night_temp": 24.54, 
+                "humidity": 68.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png"
+            }, 
+            {
+                "date": "2023-09-04", 
+                "day_temp": 26.39, 
+                "night_temp": 24.45, 
+                "humidity": 65.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png"
+            }, 
+            {
+                "date": "2023-09-05", 
+                "day_temp": 26.62, 
+                "night_temp": 24.9, 
+                "humidity": 66.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+            }
+        ]
+    }
+}{
+    "date": "03-09-2023", 
+    "city": {
+        "location": "Haifa", 
+        "country": "Israel", 
+        "days": [
+            {
+                "date": "2023-09-03", 
+                "day_temp": 26.23, 
+                "night_temp": 24.51, 
+                "humidity": 68.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png"
+            }, 
+            {
+                "date": "2023-09-04", 
+                "day_temp": 26.21, 
+                "night_temp": 24.05, 
+                "humidity": 65.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png"
+            }, 
+            {
+                "date": "2023-09-05", 
+                "day_temp": 26.78, 
+                "night_temp": 24.97, 
+                "humidity": 66.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+            }
+        ]
+    }
+}{
+    "date": "03-09-2023", 
+    "city": {
+        "location": "Haifa", 
+        "country": "Israel", 
+        "days": [
+            {
+                "date": "2023-09-03", 
+                "day_temp": 26.23, 
+                "night_temp": 24.51, 
+                "humidity": 68.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png"
+            }, 
+            {
+                "date": "2023-09-04", 
+                "day_temp": 26.21, 
+                "night_temp": 24.05, 
+                "humidity": 65.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png"
+            }, 
+            {
+                "date": "2023-09-05", 
+                "day_temp": 26.78, 
+                "night_temp": 24.97, 
+                "humidity": 66.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+            }
+        ]
+    }
+}{
+    "date": "03-09-2023", 
+    "city": {
+        "location": "Haifa", 
+        "country": "Israel", 
+        "days": [
+            {
+                "date": "2023-09-03", 
+                "day_temp": 26.35, 
+                "night_temp": 24.51, 
+                "humidity": 68.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png"
+            }, 
+            {
+                "date": "2023-09-04", 
+                "day_temp": 26.21, 
+                "night_temp": 24.05, 
+                "humidity": 65.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png"
+            }, 
+            {
+                "date": "2023-09-05", 
+                "day_temp": 26.78, 
+                "night_temp": 24.97, 
+                "humidity": 66.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+            }
+        ]
+    }
+}

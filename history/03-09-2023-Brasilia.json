@@ -1,0 +1,30 @@
+{
+    "date": "03-09-2023", 
+    "city": {
+        "location": "Brasilia", 
+        "country": "Brazil", 
+        "days": [
+            {
+                "date": "2023-09-03", 
+                "day_temp": 27.99, 
+                "night_temp": 22.67, 
+                "humidity": 49.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+            }, 
+            {
+                "date": "2023-09-04", 
+                "day_temp": 29.8, 
+                "night_temp": 24.0, 
+                "humidity": 40.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+            }, 
+            {
+                "date": "2023-09-05", 
+                "day_temp": 29.73, 
+                "night_temp": 24.37, 
+                "humidity": 39.0, 
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+            }
+        ]
+    }
+}
