@@ -69,6 +69,14 @@ jobs:
             WEBHOOK_URL="https://discordapp.com/api/webhooks/1153634597775622166/epHqCyc4EjOJbDuR0ehdwPwCf8j8vAmkFiHwW0Kw29HWyFWC0bn9qis9dHTfihXr29pc"
             MESSAGE="Test application result:\n\`\`\`\n$(cat $CIRCLE_ARTIFACTS/test_output.txt)\n\`\`\`"
             curl -X POST -H "Content-Type: application/json" -d "{\"content\":\"$MESSAGE\"}" "$WEBHOOK_URL"
+      - discord/notify:
+            message: |
+              Test application result:
+              ```
+              The test has passed!
+              ```
+            webhook-url: https://discordapp.com/api/webhooks/1153652751029522434/hAGWDeiJ709j9qC-VE7C1HuacOqfoCackvn_bRM0-xttM9fZhMLTxn7TSMKfVvHTjnlx
+
             
         
       
@@ -77,13 +85,5 @@ jobs:
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
   version: 2
-  say-hello-workflow:
-    jobs:
-      - pipeline
-      - discord/notify:
-          message: |
-            Test application result:
-            ```
-            The test has passed!
-            ```
-          webhook-url: https://discordapp.com/api/webhooks/1153652751029522434/hAGWDeiJ709j9qC-VE7C1HuacOqfoCackvn_bRM0-xttM9fZhMLTxn7TSMKfVvHTjnlx
+  pipeline
+      
