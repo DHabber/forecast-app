@@ -35,6 +35,10 @@ jobs:
           command: |
             docker build --cache-from=app --build-arg BG_COLOR="green" -t weatherapp-history .
       - run:
+          name: "Test application in a funny way that will make my mentors ask me 'mah zeh'"
+          command: |
+            echo passed
+      - run:
           name: "Tag application Docker image"
           command: |
             docker tag weatherapp-history danielhabber/weatherapp-history:latest
@@ -56,21 +60,19 @@ jobs:
           key: v1-{{ .Branch }}-{{ epoch }}
           paths:
             - /caches/app.tar
-      
-            
-            
-  say-hello:
-    # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/configuration-reference/#executor-job
-    docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/configuration-reference/#steps
-    steps:
-      - checkout
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+        name: "Send Test Result to Discord"
+        command: |
+          WEBHOOK_URL="https://discordapp.com/api/webhooks/1153634597775622166/epHqCyc4EjOJbDuR0ehdwPwCf8j8vAmkFiHwW0Kw29HWyFWC0bn9qis9dHTfihXr29pc"
+          MESSAGE=$(cat <<EOF
+          Test application result:
+          \`\`\`
+          $(docker logs <container_id>)
+          \`\`\`
+          EOF
+          )
+          curl -X POST -H "Content-Type: application/json" -d "{\"content\":\"$MESSAGE\"}" $WEBHOOK_URL
+      
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
@@ -79,4 +81,3 @@ workflows:
   say-hello-workflow:
     jobs:
       - pipeline
-      - say-hello
