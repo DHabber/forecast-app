@@ -21,7 +21,7 @@ jobs:
       - run:
           name: "Test application in a funny way that will make my mentors ask me 'mah zeh'"
           command: |
-            sudo echo passed > $CIRCLE_ARTIFACTS/test_output.txt
+            echo passed
           no_output_timeout: 120s
       - run:
           name: "Tag application Docker image"
