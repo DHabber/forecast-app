@@ -3,7 +3,6 @@
 version: 2.1
 jobs:
   pipeline:
-    working_directory: /app
     machine:
           image: ubuntu-2204:2023.02.1
     steps:
