@@ -35,6 +35,19 @@ jobs:
           command: |
             docker build --cache-from=app --build-arg BG_COLOR="green" -t weatherapp-history .
       - run:
+          name: "Tag application Docker image"
+          command: |
+            docker tag weatherapp-history danielhabber/weatherapp-history:latest
+      - run:
+          name: "Login to GitLab Container Registry"
+          command: |
+            docker login -u $GITLAB_USERNAME -p $GITLAB_PASSWORD
+      - run:
+          name: "Push Docker image to GitLab Container Registry"
+          command: |
+            docker push danielhabber/weatherapp-history:latest
+      # docker login -u $GITLAB_USERNAME -p $GITLAB_PASSWORD $GITLAB_CONTAINER_REPO_DOMAIN
+      - run:
           name: Save Docker image layer cache
           command: |
             mkdir -p /caches
@@ -43,6 +56,8 @@ jobs:
           key: v1-{{ .Branch }}-{{ epoch }}
           paths:
             - /caches/app.tar
+      
+            
             
   say-hello:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
