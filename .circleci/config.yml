@@ -8,7 +8,6 @@ jobs:
           image: ubuntu-2204:2023.02.1
     steps:
       - checkout
-      - setup_remote_docker
       - run:
           name: Install dependencies
           command: |
