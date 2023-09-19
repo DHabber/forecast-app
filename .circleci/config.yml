@@ -63,5 +63,5 @@ workflows:
   version: 2
   say-hello-workflow:
     jobs:
-      - build-docker-image
+      - pipeline
       - say-hello
