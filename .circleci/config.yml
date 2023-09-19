@@ -6,10 +6,12 @@ version: 2.1
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   build-docker-image:
-    docker:
+    machine: # Use the machine executor
       - image: cimg/base:stable
     steps:
       - checkout
+      - setup_remote_docker: # Set up Docker environment
+          docker_layer_caching: true # Optional, for caching Docker layers
       - run:
           name: "Build Docker Image"
           command: |
