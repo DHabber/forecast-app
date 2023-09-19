@@ -85,5 +85,6 @@ jobs:
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
   version: 2
-  pipeline
-      
+  say-hello-workflow:
+    jobs:
+      - pipeline
