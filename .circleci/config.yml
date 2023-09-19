@@ -5,17 +5,45 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
-  build-docker-image:
-    machine: # Use the machine executor
-      - image: cimg/base:stable
+  pipeline:
+    working_directory: /app
+    docker:
+      - image: docker:17.05.0-ce-git
     steps:
       - checkout
-      - setup_remote_docker: # Set up Docker environment
-          docker_layer_caching: true # Optional, for caching Docker layers
+      - setup_remote_docker
       - run:
-          name: "Build Docker Image"
+          name: Install dependencies
           command: |
-            docker build --build-arg BG_COLOR="green" -t weatherapp-history .
+            apk add --no-cache \
+              py-pip=9.0.0-r1
+            pip install \
+              docker-compose==1.12.0 \
+              awscli==1.11.76
+      - restore_cache:
+          keys:
+            - v1-{{ .Branch }}
+          paths:
+            - /caches/app.tar
+      - run:
+          name: Load Docker image layer cache
+          command: |
+            set +o pipefail
+            docker load -i /caches/app.tar | true
+      - run:
+          name: "Build application Docker image"
+          command: |
+            docker build --cache-from=app --build-arg BG_COLOR="green" -t weatherapp-history .
+      - run:
+          name: Save Docker image layer cache
+          command: |
+            mkdir -p /caches
+            docker save -o /caches/app.tar weatherapp-history
+      - save_cache:
+          key: v1-{{ .Branch }}-{{ epoch }}
+          paths:
+            - /caches/app.tar
+            
   say-hello:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/configuration-reference/#executor-job
