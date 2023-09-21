@@ -1,0 +1,1 @@
+chekov test: chekov -d .
